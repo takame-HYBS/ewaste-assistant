@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Public Sans", sans-serif;
+  --color-paper: #f2f6f4;
+  --color-card: #ffffff;
+  --color-ink: #12262b;
+  --color-muted: #51666b;
+  --color-line: #cfdad7;
+  --color-board: #1b6b4d;
+  --color-board-dark: #134d37;
+  --color-board-tint: #dcefe6;
+  --color-amber: #8a5a00;
+  --color-amber-tint: #fdf0d2;
+  --color-danger: #a6261d;
+  --color-danger-tint: #fbe4e1;
+}
+
+html { background: var(--color-paper); }
+body { font-family: var(--font-sans); color: var(--color-ink); background: var(--color-paper); }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+:focus-visible { outline: 3px solid var(--color-board); outline-offset: 2px; }
+.leaflet-container { font-family: var(--font-sans); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
